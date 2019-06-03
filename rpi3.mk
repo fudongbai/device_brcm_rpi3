@@ -47,6 +47,9 @@ PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    kernel/rpi/arch/arm/boot/dts/bcm2710-rpi-3-b.dtb:bcm2710-rpi-3-b.dtb \
+    kernel/rpi/arch/arm/boot/dts/overlays/vc4-kms-v3d.dtbo:fw/overlays/vc4-kms-v3d.dtbo \
+    kernel/rpi/arch/arm/boot/zImage:zImage \
     $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml \
     $(LOCAL_PATH)/rpi3_core_hardware.xml:system/etc/permissions/rpi3_core_hardware.xml \
     $(LOCAL_PATH)/init.rpi3.rc:root/init.rpi3.rc \
@@ -58,6 +61,11 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/firmware/brcm/brcmfmac43430-sdio.txt:root/lib/firmware/brcm/brcmfmac43430-sdio.txt \
     $(LOCAL_PATH)/firmware/brcm/brcmfmac43455-sdio.bin:root/lib/firmware/brcm/brcmfmac43455-sdio.bin \
     $(LOCAL_PATH)/firmware/brcm/brcmfmac43455-sdio.txt:root/lib/firmware/brcm/brcmfmac43455-sdio.txt \
+    $(LOCAL_PATH)/boot/bootcode.bin:${TARGET_OUT}/fw/bootcode.bin \
+    $(LOCAL_PATH)/boot/cmdline.txt:${TARGET_OUT}/fw/cmdline.txt \
+    $(LOCAL_PATH)/boot/config.txt:${TARGET_OUT}/fw/config.txt \
+    $(LOCAL_PATH)/boot/fixup.dat:${TARGET_OUT}/fw/fixup.dat \
+    $(LOCAL_PATH)/boot/start.elf:${TARGET_OUT}/fw/start.elf \
     $(PRODUCT_COPY_FILES)
 
 # media configurations
